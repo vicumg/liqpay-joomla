@@ -1,17 +1,6 @@
 <?php
 // No direct access
 defined('_JEXEC') or die;
-$devarray = ['79.110.129.206'];
-
-$ip = trim( JFactory::getApplication()->input->server->get('REMOTE_ADDR', ''));
-
-$isDev = in_array($ip,$devarray);
-
-if ($isDev) {
-    $show = 'block';
-}else{
-    $show = 'none';
-}
 
 ?>
 
@@ -57,7 +46,7 @@ if ($isDev) {
     }
 
 
-    let itemID ="<?php echo $menu; ?>"
+    let itemID ="<?php echo $menu; ?>";
 
     let source = document.getElementById('liqpay-source');
     let target = document.getElementById('liqpay-button-wrapper');

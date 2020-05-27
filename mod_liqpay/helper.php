@@ -16,13 +16,10 @@
 class ModLiqpayHelper
 {
     /**
-     * Retrieves the hello message
-     *
-     * @param   array  $params An object containing the module parameters
-     *
-     * @access public
+     * @param $params
+     * @return array
+     * create  encoded data for liqpay html form
      */
-
     public static function getLiqpay($params)
     {
 
@@ -39,6 +36,12 @@ class ModLiqpayHelper
     }
 
 
+    /**
+     * @param $send_data
+     * @param $private_key
+     * @return array
+     * create encoded data
+     */
     public static function getEncodeData($send_data, $private_key)
     {
 
@@ -87,6 +90,12 @@ class ModLiqpayHelper
         return $formdata;
     }
 
+
+    /**
+     * @param $data
+     * @return array
+     * preapeare data array for encoding
+     */
     public static function getLiqPayData($data)
     {
         $private_key = $data ['private_key'];

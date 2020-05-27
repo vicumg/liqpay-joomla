@@ -20,12 +20,6 @@ $menu = $app->getMenu()->getActive()->id;
 require_once dirname(__FILE__) . '/helper.php';
 
 
-/*
-$module = JModuleHelper::getModule('mod_module');
-$moduleParams = new JParameter($module->params);
-*/
-
-
 $liqpay = modLiqpayHelper::getLiqpay($params);
 
 require JModuleHelper::getLayoutPath('mod_liqpay');
